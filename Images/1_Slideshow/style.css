@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, sans-serif;
+}
+.slideshow_container {
+    position: relative;
+
+    max-width: 1000px;
+    margin: auto;
+}
+.mySlides {
+    /* ẩn phần tử */
+    display: none;
+}
+.numberText {
+    position: absolute;
+    top: 0;
+
+    /* background-color: red; */
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+.text {
+    position: absolute;
+    bottom: 8px;
+
+    /* background-color: red; */
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+
+    /* background-color: orange; */
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-top: -22px;
+    padding: 16px;
+    width: auto;
+    user-select: none;
+    border-radius: 0 3px 3px 0;
+    transition: 0.6s ease;
+}
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+.prev:hover ,.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.dot {
+    /* dùng inline-block phải có height and width */
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    cursor: pointer;
+    margin: 0 2px;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
